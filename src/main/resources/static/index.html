@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkty</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="p-3 mb-2 bg-success text-white" >Promocja na produkt DOMESTOS !!!</div>
+<div style="width: 500px; margin: 50px auto">
+<!--        z przymrużeniem oka ;)-->
+        <iframe width="500" height="285" src="https://www.youtube.com/embed/WFXpUxjyPn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--    <img src="https://www.tss.tarnow.pl/wp-content/uploads/2016/10/slajd2.png" class="img-fluid" alt="...">-->
+
+        <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+            <a href="/lista">Wszystkie artykuły</a>
+        </button>
+        <button type="button"class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+            <a href="/lista?kategoria=FOOD">Art. spożywcze</a>
+        </button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+            <a href="/lista?kategoria=AGD">AGD</a>
+        </button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+            <a href="/lista?kategoria=OTHER">Inne</a>
+        </button>
+
+    <h2>Dodawanie produktu</h2>
+
+    <form action="/dodaj" method="post">
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nazwa</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Nazwa">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Cena</label>
+            <input type="number" step="0.01" class="form-control" id="price" name="price" value="0.00" placeholder="Cena">
+        </div>
+
+        <div class="form-group">
+            <label for="inputState">Kategoria</label>
+            <select id="inputState" class="form-control" name="category">
+                <option value="AGD">Art. gosp. domowego</option>
+                <option value="FOOD">Art. spożywcze</option>
+                <option value="OTHER">Inne</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Dodaj" class="btn btn-primary"/>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+
